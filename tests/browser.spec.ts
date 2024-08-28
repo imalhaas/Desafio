@@ -22,7 +22,7 @@ test('fill in the fields and click the Start challenge button', async ({ page })
 
   await expect(page).toHaveURL('http://localhost:5173/candidate?name=Lucas&phone=123&email=lucasdecassia9@hotmail.com');
 
-  await page.waitForTimeout(1000); // await 30s
+  await page.waitForTimeout(1000); // await 1s
 
   await page.click('button:has-text("Back to Challenge")');
 
