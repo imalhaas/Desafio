@@ -16,6 +16,13 @@ test('fill in the fields and click the Start challenge button', async ({ page })
   
   await expect(page.locator('button:has-text("Start Challenge")')).toBeDisabled();
 
+  await page.click('button:has-text("Submit")');
+
+  await expect(page.locator('text=Challenge completed success')).toBeVisible();
+
+  await expect(page).toHaveURL('http://localhost:5173/candidate?name=Lucas&phone=123&email=lucasdecassia9@hotmail.com');
+
+
 });
 
 

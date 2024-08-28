@@ -57,17 +57,18 @@
 
 <main class="relative flex flex-col items-center justify-center h-screen bg-gradient-to-l from-blue-500 to-purple-600 text-white space-y-4">
   <div>
-    <label class="block mb-2">Name:</label>
-    <input type="text" bind:value={name} class="input input-bordered w-full max-w-xs text-black" />
+    <label for="name" class="block mb-2">Name:</label>
+    <input id="name" type="text" bind:value={name} class="input input-bordered w-full max-w-xs text-black" />
   </div>
   <div>
-    <label class="block mb-2">Telephone:</label>
-    <input type="tel" bind:value={phone} class="input input-bordered w-full max-w-xs text-black" />
+    <label for="phone" class="block mb-2">Telephone:</label>
+    <input id="phone" type="tel" bind:value={phone} class="input input-bordered w-full max-w-xs text-black" />
   </div>
   <div>
-    <label class="block mb-2">Email:</label>
-    <input type="email" bind:value={email} class="input input-bordered w-full max-w-xs text-black" />
+    <label for="email" class="block mb-2">Email:</label>
+    <input id="email" type="email" bind:value={email} class="input input-bordered w-full max-w-xs text-black" />
   </div>
+  
   <button on:click={startTimer} class="btn btn-primary" disabled={startChallenge}>Start Challenge</button>
 
   {#if startChallenge}
